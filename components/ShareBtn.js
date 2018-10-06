@@ -106,8 +106,8 @@ export default class ShareBtn extends React.Component {
     }
     if (navigator && navigator.share !== undefined) {
       navigator.share({
-        title: this.props.text,
-        text: this.props.text + this.props.url,
+        title: this.props.subject,
+        text: this.props.text,
         url: this.props.url
       }).then(() => console.log('Successful share'))
       .catch(error => console.log('Error sharing:', error))
@@ -137,7 +137,8 @@ ShareBtn.propTypes = {
   text: React.PropTypes.string,
   className: React.PropTypes.string,
   displayText: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.element]),
-  onShareBtnClick: React.PropTypes.func
+  onShareBtnClick: React.PropTypes.func,
+  subject: React.PropTypes.string
 }
 
 ShareBtn.defaultProps = {
@@ -154,7 +155,8 @@ SharePopup.propTypes = {
   text: React.PropTypes.string,
   subject: React.PropTypes.string,
   shareModalOpen: React.PropTypes.bool,
-  sharedBy: React.PropTypes.func
+  sharedBy: React.PropTypes.func,
+  onClick: React.PropTypes.func
 }
 
 ShareBtn.defaultProps = {

@@ -196,8 +196,8 @@ var ShareBtn = function (_React$Component2) {
       }
       if (navigator && navigator.share !== undefined) {
         navigator.share({
-          title: this.props.text,
-          text: this.props.text + this.props.url,
+          title: this.props.subject,
+          text: this.props.text,
           url: this.props.url
         }).then(function () {
           return console.log('Successful share');
@@ -241,7 +241,8 @@ ShareBtn.propTypes = {
   text: _react2.default.PropTypes.string,
   className: _react2.default.PropTypes.string,
   displayText: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.element]),
-  onShareBtnClick: _react2.default.PropTypes.func
+  onShareBtnClick: _react2.default.PropTypes.func,
+  subject: _react2.default.PropTypes.string
 };
 
 ShareBtn.defaultProps = {
@@ -258,7 +259,8 @@ SharePopup.propTypes = {
   text: _react2.default.PropTypes.string,
   subject: _react2.default.PropTypes.string,
   shareModalOpen: _react2.default.PropTypes.bool,
-  sharedBy: _react2.default.PropTypes.func
+  sharedBy: _react2.default.PropTypes.func,
+  onClick: _react2.default.PropTypes.func
 };
 
 ShareBtn.defaultProps = {
