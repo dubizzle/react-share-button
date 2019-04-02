@@ -109,7 +109,7 @@ var SharePopup = function (_React$Component) {
           } }),
         _react2.default.createElement(
           'a',
-          { className: 'sp-tab', href: 'whatsapp://send?text=' + text, onClick: this.whatsappClicked },
+          { className: 'sp-tab', href: 'https://wa.me/?text=' + text, onClick: this.whatsappClicked },
           _react2.default.createElement('div', { className: 'icon whatsapp' }),
           _react2.default.createElement(
             'span',

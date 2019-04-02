@@ -61,7 +61,7 @@ class SharePopup extends React.Component {
     return (
       <div className='share-popup' onClick={this.props.onClick}>
         {this.props.shareModalOpen && <Visibility ref={(node) => { this.visibility = node }} />}
-        <a className='sp-tab' href={`whatsapp://send?text=${text}`} onClick={this.whatsappClicked}>
+        <a className='sp-tab' href={`https://wa.me/?text=${text}`} onClick={this.whatsappClicked}>
           <div className='icon whatsapp' />
           <span className='text'>WhatsApp</span>
         </a>
